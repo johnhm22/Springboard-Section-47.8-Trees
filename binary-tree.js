@@ -91,14 +91,12 @@ maxSum(){
 
     while(toVisitQueue.length){
       const current = toVisitQueue.shift();
-//       if(current.val > lowerbound && current.val < valueLargerThanLowerBound){
         if(current.val > lowerbound){
         valueLargerThanLowerBound = current.val;
       }
       if(current.left) toVisitQueue.push(current.left);
       if(current.right) toVisitQueue.push(current.right);
     }
-//     return valueLargerThanLowerBound? valueLargerThanLowerBound : null;
         return valueLargerThanLowerBound;
   }
 
